@@ -1,0 +1,10 @@
+.idea
+/build
+/out
+QDU_Web.iml
+# Eclipse
+.project
+.classpath
+/.settings
+*.exe
+*.log
