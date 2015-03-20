@@ -16,6 +16,7 @@ Ext.define('AM.view.user.List', {
 
         this.columns = [
 
+            {header: 'id', dataIndex: 'id', flex: 1},
             {header: 'Name', dataIndex: 'name', flex: 1},
 
             {header: 'Email', dataIndex: 'email', flex: 1}

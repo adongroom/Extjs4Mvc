@@ -6,8 +6,8 @@ Ext.define('AM.controller.Users', {
 
     extend: 'Ext.app.Controller',
     views: [
-
-        'user.List',
+        /*可以使用全路径名字或者使用报下面的相对路径*/
+        'AM.view.user.List',
         'user.Edit'
 
     ],
@@ -50,6 +50,8 @@ Ext.define('AM.controller.Users', {
         record.set(values);
 
         win.close();
+        /*告诉store去同步更新数据*/
+        this.getUsersStore().sync();
 
     },
     editUser: function (grid, record) {

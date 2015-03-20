@@ -7,12 +7,31 @@ Ext.define('AM.store.Users', {
     extend: 'Ext.data.Store',
 
     model: 'AM.model.User',
-    data: [
+    autoLoad: true,
 
-        {name: 'Ed', email: 'ed@sencha.com'},
 
-        {name: 'Tommy', email: 'tommy@sencha.com'}
+    proxy: {
 
-    ]
+        type: 'ajax',
+
+        api: {
+            read: 'data/user.json',
+
+            update: 'data/updateUser.json'
+
+
+        },
+
+        reader: {
+
+            type: 'json',
+
+            root: 'users',
+
+            successProperty: 'success'
+
+        }
+
+    }
 
 });
